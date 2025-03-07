@@ -21,7 +21,8 @@ void find_twin_primes(int a) {
 		}
 }
 
-void main (void)
+int main(void)
 {
 	find_twin_primes(50);
+	return 0;
 }
