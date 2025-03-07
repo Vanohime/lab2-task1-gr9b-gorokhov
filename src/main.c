@@ -2,8 +2,7 @@
 Здесь выполнено задание 1
 */
 #include <stdio.h>
-
-#include <stdio.h>
+#include  <stdlib.h>
 
 int is_prime(int n) {
 		if (n < 2) return 0;
@@ -21,8 +20,13 @@ void find_twin_primes(int a) {
 		}
 }
 
-int main(void)
+int main(int argc, char** argv)
 {
-	find_twin_primes(50);
+	if(argc != 1){
+		printf("Invalid number of arguments\n");
+		return 1;
+	}
+	int a = atoi(argv[1]);
+	find_twin_primes(a);
 	return 0;
 }
